@@ -48,9 +48,10 @@ Edit CSS variables in `css/style.css`:
 
 ```css
 :root {
-    --primary: #1a1a1a;
-    --accent: #0066ff;
-    /* ... other colors */
+    --bg-color: #fafafa;
+    --text-primary: #111;
+    --text-secondary: #555;
+    /* ... more variables */
 }
 ```
 
