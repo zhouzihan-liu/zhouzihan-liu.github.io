@@ -1,32 +1,71 @@
-# Academic Homepage
+# Personal Homepage Template
 
-A clean, minimalist, and professional academic homepage template designed with the **Swiss International Style**.
+A minimalist personal/academic homepage template. Clean, fast, and easy to customize.
+
+**[Live Demo →](https://zhouzihan-liu.github.io)**
 
 ## Features
 
-- **No Frameworks:** Pure HTML5, CSS3, and Vanilla JS. Lightweight and fast.
-- **Responsive:** Split-screen layout for desktop, single column for mobile.
-- **Dark Mode:** Built-in theme toggle with system preference detection.
-- **Print Friendly:** Semantic structure ensures good print layout.
+- **Zero Dependencies:** Pure HTML/CSS/JS - no build tools needed
+- **Data-Driven:** Update content by editing JS files, no HTML changes required  
+- **Responsive Design:** Optimized for desktop and mobile
+- **Particle Background:** Animated canvas effect
 
-## Setup for GitHub Pages
+## Quick Start
 
-1.  **Clone/Download** this repository.
-2.  **Edit `index.html`**:
-    *   Replace `[Your Name]` with your name.
-    *   Update the `profile-photo-placeholder` div with an `<img>` tag pointing to your photo (place photo in `assets/images/`).
-    *   Fill in your Bio, News, Publications, and Experience.
-3.  **Deploy**:
-    *   Upload to a GitHub repository.
-    *   Go to **Settings** > **Pages**.
-    *   Select `main` branch as source.
-    *   Your site is live!
+### 1. Use This Template
+
+Click **"Use this template"** or fork this repository.
+
+### 2. Update Your Content
+
+Edit the files in `js/data/`:
+
+- **`profile.js`** - Name, bio, photo, contact links
+- **`news.js`** - News and updates
+- **`works.js`** - Publications, projects, or portfolio items
+
+### 3. Add Your Photo
+
+1. Create an `assets/images/` folder
+2. Add your photo (e.g., `profile.jpg`)
+3. Update the path in `js/data/profile.js`:
+   ```javascript
+   photo: "assets/images/profile.jpg"
+   ```
+
+### 4. Deploy to GitHub Pages
+
+1. Go to repository **Settings** → **Pages**
+2. Select `main` branch as source
+3. Your site will be live at `https://[username].github.io/[repo-name]`
 
 ## Customization
 
-- **Colors:** Edit the CSS variables in `css/style.css` under `:root`.
-- **Fonts:** Currently uses `Inter` (sans-serif) and `Playfair Display` (serif) from Google Fonts. Change the imports in `index.html` and variables in CSS to switch.
+### Colors
+
+Edit CSS variables in `css/style.css`:
+
+```css
+:root {
+    --primary: #1a1a1a;
+    --accent: #0066ff;
+    /* ... other colors */
+}
+```
+
+### Fonts
+
+Change the Google Fonts import in `index.html` (line 12) and update CSS variables.
+
+### Structure
+
+- `index.html` - Page structure
+- `css/style.css` - All styles
+- `js/app.js` - Main application logic
+- `js/particles.js` - Background animation
+- `js/data/` - **Your content goes here**
 
 ## License
 
-MIT License. Free to use and modify for your personal academic website.
+MIT License - free to use and modify.
