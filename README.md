@@ -1,32 +1,30 @@
-# Academic Homepage
+# Academic Homepage Template
 
-A clean, minimalist, and professional academic homepage template designed with the **Swiss International Style**.
+A minimalist, data-driven academic homepage designed in the **Swiss International Style**.
 
-## Features
+It is built with raw HTML/CSS/JS. **Zero dependencies. No build tools. No `npm install`.**
 
-- **No Frameworks:** Pure HTML5, CSS3, and Vanilla JS. Lightweight and fast.
-- **Responsive:** Split-screen layout for desktop, single column for mobile.
-- **Dark Mode:** Built-in theme toggle with system preference detection.
-- **Print Friendly:** Semantic structure ensures good print layout.
+## How to Use
 
-## Setup for GitHub Pages
+1.  **Fork** this repository.
+2.  **Edit Data**: All content is separated in `js/data/`. You don't need to touch HTML.
+    *   `profile.js`: Name, bio, social links, education/timeline.
+    *   `news.js`: Updates/News list.
+    *   `works.js`: Publications and projects.
+3.  **Images**: Replace `assets/images/cat.svg` with your profile photo.
+4.  **Deploy**: Go to GitHub Repo -> Settings -> Pages -> Select `main` branch. Done.
 
-1.  **Clone/Download** this repository.
-2.  **Edit `index.html`**:
-    *   Replace `[Your Name]` with your name.
-    *   Update the `profile-photo-placeholder` div with an `<img>` tag pointing to your photo (place photo in `assets/images/`).
-    *   Fill in your Bio, News, Publications, and Experience.
-3.  **Deploy**:
-    *   Upload to a GitHub repository.
-    *   Go to **Settings** > **Pages**.
-    *   Select `main` branch as source.
-    *   Your site is live!
+## Local Development
+
+Since this project uses a Namespace pattern instead of ES Modules, you don't even need a local server.
+
+*   **Just double-click `index.html`** to open it in your browser.
 
 ## Customization
 
-- **Colors:** Edit the CSS variables in `css/style.css` under `:root`.
-- **Fonts:** Currently uses `Inter` (sans-serif) and `Playfair Display` (serif) from Google Fonts. Change the imports in `index.html` and variables in CSS to switch.
+*   **Colors/Fonts**: Edit CSS variables in `css/style.css` (`:root`).
+*   **Ink Effect**: The background is a procedural canvas (`js/visuals/ink-landscape.js`). You can toggle it off in `js/main.js` if you prefer a static background.
 
 ## License
 
-MIT License. Free to use and modify for your personal academic website.
+MIT. Feel free to use this as your own personal website.
