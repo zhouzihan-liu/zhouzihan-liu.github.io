@@ -3,6 +3,7 @@ window.App.Data.profile = {
     name: "Zihan Zhou",
     chineseName: "周子涵",
     seal: "周", 
+    googleAnalyticsId: "G-FHK651VNYM", // Configuration: Enter your GA Measurement ID here (e.g., "G-XXXXXXXXXX")
     // title: "Building Interpretable<br><span class=\"text-light\">Machine Intelligence.</span>",
     title: "LLM Enhancement<br><span class=\"text-light\">Human-AI Synergy.</span>",
     bio: "I research LLM augmentation and human-AI collaboration, focusing on enhancing language model capabilities and designing intuitive interaction paradigms for effective human-LLM synergy.",

@@ -19,10 +19,29 @@ class App {
 
     init() {
         console.log("App Starting...");
+        this.injectAnalytics();
         this.renderAll();
         this.initInteractive();
         this.initVisuals();
         console.log("App Started Successfully.");
+    }
+
+    injectAnalytics() {
+        const gaId = this.Data.profile.googleAnalyticsId;
+        if (!gaId) return;
+
+        console.log(`Initializing Analytics (${gaId})...`);
+        
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag; // Expose to window for potential usage
+        gtag('js', new Date());
+        gtag('config', gaId);
     }
 
     renderAll() {
