@@ -30,7 +30,7 @@ window.App.Core.Renderer = {
     },
 
     hero(profile) {
-        const nameParts = [profile.name, profile.chineseName, ...(profile.alternateNames || [])].filter(Boolean);
+        const nameParts = [profile.chineseName, ...(profile.alternateNames || [])].filter(Boolean);
         const nameLine = nameParts.length ? `<div class="hero-name">${nameParts.join(' / ')}</div>` : '';
         const photoHtml = profile.photo
             ? `<img src="${profile.photo}" class="profile-img" alt="Portrait of ${profile.name || 'Profile'}">`
