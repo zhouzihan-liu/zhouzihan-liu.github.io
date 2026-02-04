@@ -2,6 +2,7 @@
 window.App.Data.profile = {
     name: "Zihan Zhou",
     chineseName: "周子涵",
+    alternateNames: ["Zizhan Zhou"],
     seal: "周", 
     googleAnalyticsId: "G-FHK651VNYM", // Configuration: Enter your GA Measurement ID here (e.g., "G-XXXXXXXXXX")
     // title: "Building Interpretable<br><span class=\"text-light\">Machine Intelligence.</span>",

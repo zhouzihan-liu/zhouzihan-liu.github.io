@@ -3,6 +3,8 @@
 
 window.App.Core.Renderer = {
     header(data) {
+        const altNames = Array.isArray(data.alternateNames) ? data.alternateNames.filter(Boolean) : [];
+        const altHtml = altNames.length ? `<div class="brand-alt">${altNames.join(' / ')}</div>` : '';
         const cnGroup = data.chineseName ? `
             <div class="brand-cn-group">
                 ${data.chineseName.split('').map((char, i) => 
@@ -20,6 +22,7 @@ window.App.Core.Renderer = {
         return `
             <div class="brand-container">
                 <div class="brand">${data.name}</div>
+                ${altHtml}
                 ${cnGroup}
             </div>
             ${navHtml}
@@ -27,6 +30,11 @@ window.App.Core.Renderer = {
     },
 
     hero(profile) {
+        const nameParts = [profile.name, profile.chineseName, ...(profile.alternateNames || [])].filter(Boolean);
+        const nameLine = nameParts.length ? `<div class="hero-name">${nameParts.join(' / ')}</div>` : '';
+        const photoHtml = profile.photo
+            ? `<img src="${profile.photo}" class="profile-img" alt="Portrait of ${profile.name || 'Profile'}">`
+            : `<div class="photo-placeholder">Photo</div>`;
         const specsHtml = profile.specs.map(spec => {
             const valContent = spec.active 
                 ? `<div class="status-indicator"><span class="status-dot"></span><span class="spec-val">${spec.value}</span></div>` 
@@ -36,12 +44,13 @@ window.App.Core.Renderer = {
 
         return `
             <div class="hero-text">
+                ${nameLine}
                 <h1 class="hero-title">${profile.title}</h1>
                 <p class="hero-bio">${profile.bio}</p>
             </div>
             <div class="hero-profile-col">
                 <div class="photo-frame">
-                    <img src="${profile.photo}" class="profile-img" alt="Profile Photo">
+                    ${photoHtml}
                 </div>
                 <div class="specs-list">${specsHtml}</div>
             </div>

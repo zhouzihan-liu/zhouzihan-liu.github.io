@@ -72,6 +72,13 @@ body {
     line-height: 1.2;
     z-index: 2; 
 }
+.brand-alt {
+    font-family: var(--font-en-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--text-light);
+    margin-top: -2px;
+}
 
 /* 艺术字容器 */
 /* 中文名组合 (横排) */
@@ -190,6 +197,13 @@ body {
     letter-spacing: -0.04em; /* 极紧的字距，形成块状感 */
     margin-bottom: 24px; margin-top: -10px;
     color: #1a1a1a;
+}
+.hero-name {
+    font-family: var(--font-en-sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 12px;
 }
 .text-light { color: var(--text-light); font-family: var(--font-en-serif); } 
 
