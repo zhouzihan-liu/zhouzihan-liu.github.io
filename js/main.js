@@ -45,6 +45,9 @@ class App {
     }
 
     renderAll() {
+        // 0. Meta Tags (SEO)
+        this.Renderer.meta(this.Data.meta);
+
         // 1. Header
         const headerEl = document.querySelector('.header');
         if (headerEl) {

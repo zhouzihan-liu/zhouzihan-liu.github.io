@@ -2,6 +2,59 @@
 // 纯函数设计，无副作用，挂载到 window.App.Core
 
 window.App.Core.Renderer = {
+    meta(data) {
+        if (!data) return;
+        
+        // Update Title
+        if (data.title) {
+            document.title = data.title;
+            this._updateMeta('property', 'og:title', data.title);
+            this._updateMeta('name', 'twitter:title', data.title);
+        }
+
+        // Update Description
+        if (data.description) {
+            this._updateMeta('name', 'description', data.description);
+            this._updateMeta('property', 'og:description', data.description);
+            this._updateMeta('name', 'twitter:description', data.description);
+        }
+
+        // Update Keywords & Author
+        if (data.keywords) this._updateMeta('name', 'keywords', data.keywords);
+        if (data.author) this._updateMeta('name', 'author', data.author);
+
+        // Update Favicon
+        if (data.favicon) {
+            let link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                document.head.appendChild(link);
+            }
+            link.href = data.favicon;
+        }
+
+        // Update Open Graph & Twitter Extras
+        if (data.openGraph) {
+            if (data.openGraph.type) this._updateMeta('property', 'og:type', data.openGraph.type);
+            if (data.openGraph.site_name) this._updateMeta('property', 'og:site_name', data.openGraph.site_name);
+            if (data.openGraph.url) this._updateMeta('property', 'og:url', data.openGraph.url);
+        }
+        if (data.twitter && data.twitter.card) {
+            this._updateMeta('name', 'twitter:card', data.twitter.card);
+        }
+    },
+
+    _updateMeta(attrName, attrValue, content) {
+        let element = document.querySelector(`meta[${attrName}="${attrValue}"]`);
+        if (!element) {
+            element = document.createElement('meta');
+            element.setAttribute(attrName, attrValue);
+            document.head.appendChild(element);
+        }
+        element.setAttribute('content', content);
+    },
+
     header(data) {
         const cnGroup = data.chineseName ? `
             <div class="brand-cn-group">

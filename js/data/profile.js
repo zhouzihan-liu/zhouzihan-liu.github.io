@@ -16,6 +16,22 @@ window.App.Data.profile = {
     ]
 };
 
+window.App.Data.meta = {
+    title: "Zihan Zhou | 周子涵",
+    description: "Zihan Zhou (周子涵, also written Zizhan Zhou) is a Master's student in Computer Science at Northeastern University focusing on LLM augmentation and human-AI collaboration.",
+    keywords: "Zihan Zhou, Zizhan Zhou, 周子涵, LLM, Human-AI Collaboration, Northeastern University",
+    author: "Zihan Zhou",
+    favicon: "https://zhouzihan-liu.github.io/assets/favicon.svg",
+    openGraph: {
+        type: "website",
+        site_name: "Zihan Zhou",
+        url: "https://zhouzihan-liu.github.io/"
+    },
+    twitter: {
+        card: "summary"
+    }
+};
+
 window.App.Data.nav = [
     { label: "About", href: "#about" },
     { label: "News", href: "#news" },
