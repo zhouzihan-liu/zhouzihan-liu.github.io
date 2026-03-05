@@ -7,6 +7,10 @@ window.App.Data.news = {
             date: "2026.01.16",
             content: "Our paper <strong>\"DiagLink\"</strong> accepted to <span class=\"highlight-text\">CHI 2026</span>."
         },
+        {
+            date: "2026.02.11",
+            content: "Selected as a Student Volunteer for CHI 2026. See you in Barcelona, Spain 🇪🇸, Hola!"
+        },
     ]
 };
 
