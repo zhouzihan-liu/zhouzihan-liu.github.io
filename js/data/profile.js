@@ -18,8 +18,8 @@ window.App.Data.profile = {
 
 window.App.Data.meta = {
     title: "Zihan Zhou | 周子涵",
-    description: "Zihan Zhou (周子涵, also written Zizhan Zhou) is a Master's student in Computer Science at Northeastern University focusing on LLM augmentation and human-AI collaboration.",
-    keywords: "Zihan Zhou, Zizhan Zhou, 周子涵, LLM, Human-AI Collaboration, Northeastern University",
+    description: "I am a Master's student in Computer Science at Northeastern University focusing on LLM augmentation and human-AI collaboration.",
+    keywords: "Zihan Zhou, zhou zihan, 周子涵, LLM, Human-AI Collaboration, Northeastern University, neu",
     author: "Zihan Zhou",
     favicon: "https://zhouzihan-liu.github.io/assets/favicon.svg",
     openGraph: {
